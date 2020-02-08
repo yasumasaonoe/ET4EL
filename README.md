@@ -1,8 +1,8 @@
 # ET4EL
 
->[**Fine-Grained Entity Typing for Domain Independent Entity Linking**](https://arxiv.org/pdf/1909.05780.pdf)
->Yasumasa Onoe and Greg Durrett
->AAAI 2020
+> [**Fine-Grained Entity Typing for Domain Independent Entity Linking**](https://arxiv.org/pdf/1909.05780.pdf),
+> Yasumasa Onoe and Greg Durrett,
+> AAAI 2020
 
 
 ## Prerequisites
