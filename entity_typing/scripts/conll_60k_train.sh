@@ -1,0 +1,2 @@
+#!/bin/zsh
+CUDA_VISIBLE_DEVICES=0 CUDA_CACHE_PATH='~/cudacache' python -u main.py conll_60k_train -enhanced_mention -model_type ETModel -batch_size 32 -eval_batch_size 32 -log_period 1000 -eval_period 20000 -eval_after 200000 -save_period 10000000 -goal conll_60k -learning_rate 0.001 -input_dropout 0.5 -train_data entity_typing_data/train/et_conll_60k/train_*.json -dev_data entity_typing_data/validation/dev_et_conll_60k.json

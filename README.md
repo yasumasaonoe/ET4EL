@@ -7,24 +7,34 @@
 
 ## Prerequisites
 
-The code is developed with `python 3.7` and `pytorch 1.0.0`. 
+* The code is developed with `python 3.7` and `pytorch 1.0.0` or newer versions (we've tested our code on `pytorch 1.4.0`).  
 
 
 ## Training Entity Typing Models
 
-Coming soon...
+* Please see examples in `entity_typing/scripts`.
 
 ## Evaluating Models on Entity Linking
 
-Coming soon...
+* Please see examples in `entity_typing/scripts`.
 
 
 ## Data
 
-### WikilinksNED Unseen-Mentions   
+### Training Data 
 
-This data is created by splitting the WikilinksNED training set (Eshel et al. 2017) into train, development, and test sets by unique mentions (15.5k for train, 1k for dev, and 1k for test). There are no common mentions between the train, dev, and test sets. The dataset can be downloaded from [here](https://drive.google.com/a/utexas.edu/file/d/1jANXLqsDwZvRBxhgDRryOQgClqyzciII/view?usp=drive_web).
+* We train our entity typing model on data derived from March 2019 English Wikipedia dump. This data can be downloaded from [here](https://drive.google.com/file/d/1m9CPaehSjlsFA6Na-bYZ2GWt_kzyfJTo/view?usp=sharing).
 
+### Entity Linking Data for Evaluation
+
+#### CoNLL-YAGO
+
+* This data is not publicly available. You can find more information [here](https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/research/yago-naga/aida/downloads/).
+
+
+#### WikilinksNED Unseen-Mentions   
+
+* This data is created by splitting the WikilinksNED training set (Eshel et al. 2017) into train, development, and test sets by unique mentions (15.5k for train, 1k for dev, and 1k for test). There are no common mentions between the train, dev, and test sets. The dataset can be downloaded from [here](https://drive.google.com/a/utexas.edu/file/d/1jANXLqsDwZvRBxhgDRryOQgClqyzciII/view?usp=drive_web). Note that the training set is used for baselines only.
 
 ## Questions
 Contact us at `yasumasa@cs.utexas.edu` if you have any questions!
