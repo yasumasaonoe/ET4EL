@@ -12,11 +12,15 @@
 
 ## Training Entity Typing Models
 
-* Please see examples in `entity_typing/scripts`.
+* Download our training data (`entity_typing_data`) from [here](https://drive.google.com/file/d/1m9CPaehSjlsFA6Na-bYZ2GWt_kzyfJTo/view?usp=sharing) and put under `data`.
+  * `entity_typing_data/train/et_conll_60k` uses the type set `data/onotology/conll_categories.txt`.
+* Check `entity_typing/constant.py` to make sure paths are correct.
+* Run the training function in `entity_typing/main.py`. Please see example commands in `entity_typing/scripts`.
 
 ## Evaluating Models on Entity Linking
 
-* Please see examples in `entity_typing/scripts`.
+* Put entity linking evaluation data in the appropriate folder.
+* Run the evaluation function in `entity_typing/main.py`. Please see example commands in `entity_typing/scripts`.
 
 
 ## Data
