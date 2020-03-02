@@ -12,7 +12,7 @@
 
 ## Training Entity Typing Models
 
-* Download our training data (`entity_typing_data`) from [here](https://drive.google.com/file/d/1m9CPaehSjlsFA6Na-bYZ2GWt_kzyfJTo/view?usp=sharing) and put under `data`.
+* Download our training data (`entity_typing_data`) from [here](https://drive.google.com/file/d/1m9CPaehSjlsFA6Na-bYZ2GWt_kzyfJTo/view?usp=sharing) (12GB) and put under `data`.
   * `entity_typing_data/train/et_conll_60k` uses the type set `data/onotology/conll_categories.txt`.
 * Check `entity_typing/constant.py` to make sure paths are correct.
 * Run the training function in `entity_typing/main.py`. Please see example commands in `entity_typing/scripts`.
@@ -27,7 +27,7 @@
 
 ### Training Data 
 
-* We train our entity typing model on data derived from March 2019 English Wikipedia dump. This data can be downloaded from [here](https://drive.google.com/file/d/1m9CPaehSjlsFA6Na-bYZ2GWt_kzyfJTo/view?usp=sharing).
+* We train our entity typing model on data derived from March 2019 English Wikipedia dump. This data can be downloaded from [here](https://drive.google.com/file/d/1m9CPaehSjlsFA6Na-bYZ2GWt_kzyfJTo/view?usp=sharing) (12GB).
 
 ### Entity Linking Data for Evaluation
 
