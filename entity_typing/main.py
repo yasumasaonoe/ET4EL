@@ -137,7 +137,7 @@ def evaluate_data(batch_num, dev_fname, model, args, elmo, device, char_vocab, d
   gold_pred = []
   eval_loss = 0.
   total_ex_count = 0
-  for batch in tqdm(dev_gen): 
+  for batch in tqdm(dev_gen):
     total_ex_count += len(batch['y'])
     eval_batch, annot_ids = to_torch(batch, device)
     loss, output_logits, _ = model(eval_batch)
@@ -164,40 +164,6 @@ def load_model(reload_model_name, save_dir, model_id, model, optimizer=None):
     model_file_name = '{0:s}/{1:s}.pt'.format(save_dir, model_id)
   checkpoint = torch.load(model_file_name)
   model.load_state_dict(checkpoint['state_dict'])
-  if optimizer:
-    optimizer.load_state_dict(checkpoint['optimizer'])
-  else:
-    total_params = 0
-    # Log params
-    for k in checkpoint['state_dict']:
-      elem = checkpoint['state_dict'][k]
-      param_s = 1
-      for size_dim in elem.size():
-        param_s = size_dim * param_s
-      print(k, elem.size())
-      total_params += param_s
-    param_str = ('Number of total parameters..{0:d}'.format(total_params))
-    logging.info(param_str)
-    print(param_str)
-  logging.info("Loading old file from {0:s}".format(model_file_name))
-  print('Loading model from ... {0:s}'.format(model_file_name))
-
-
-def load_model_partially(reload_model_name, save_dir, model_id, model, freeze=False, optimizer=None):
-  if reload_model_name:
-    model_file_name = '{0:s}/{1:s}.pt'.format(save_dir, reload_model_name)
-  else:
-    model_file_name = '{0:s}/{1:s}.pt'.format(save_dir, model_id)
-  checkpoint = torch.load(model_file_name)
-  pretrained_state_dict = checkpoint['state_dict']
-  model_state_dict = model.state_dict()
-  pretrained_state_dict = {k: v for k, v in pretrained_state_dict.items() if k in model_state_dict}
-  model_state_dict.update(pretrained_state_dict)
-  model.load_state_dict(model_state_dict)
-  if freeze:
-    for pname, param in model.named_parameters():
-      if pname in pretrained_state_dict:
-        param.requires_grad = False
   if optimizer:
     optimizer.load_state_dict(checkpoint['optimizer'])
   else:
