@@ -38,7 +38,7 @@
 
 #### WikilinksNED Unseen-Mentions   
 
-* This data is created by splitting the WikilinksNED training set (Eshel et al. 2017) into train, development, and test sets by unique mentions (15.5k for train, 1k for dev, and 1k for test). There are no common mentions between the train, dev, and test sets. The dataset can be downloaded from [here](https://drive.google.com/a/utexas.edu/file/d/1jANXLqsDwZvRBxhgDRryOQgClqyzciII/view?usp=drive_web). Note that the training set is used for baselines only.
+* This data is created by splitting the WikilinksNED training set (Eshel et al. 2017) into train, development, and test sets by unique mentions (15.5k for train, 1k for dev, and 1k for test). There are no common mentions between the train, dev, and test sets. The dataset can be downloaded from [here](https://drive.google.com/file/d/14aI7WaoIchSEYyyKDVtAq-96ZLNdZqZS/view?usp=share_link). Note that the training set is used for baselines only.
 
 ## Questions
 Contact us at `yasumasa@cs.utexas.edu` if you have any questions!
